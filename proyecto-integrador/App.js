@@ -1,69 +1,37 @@
-import React from "react";
-import {
-  Text,
-  View,
-  StyleSheet,
-  Image,
-  TouchableOpacity,
-  Alert,
-} from "react-native";
-import duck from "./assets/duck.png";
-import * as ImagePicker from "expo-image-picker";
-import { useState } from "react";
+import React, { Component } from "react";
+import { StyleSheet, Text, View } from "react-native";
+import { NavigationContainer, DefaultTheme } from "@react-navigation/native";
+import { createNativeStackNavigator } from "@react-navigation/native-stack";
+import HomeScreen from "./app/screens/HomeScreen";
+import RegisterScreen from "./app/screens/RegisterScreen";
+import WelcomeScreen from "./app/screens/WelcomeScreen";
+import LogInScreen from "./app/screens/LogInScreen";
 
-const App = () => {
-  const [selectedImage, setSelectedImage] = useState(null);
-  let openImagePickerAsync = async () => {
-    let permissionResult =
-      await ImagePicker.requestMediaLibraryPermissionsAsync();
-    if (permissionResult.granted === false) {
-      alert("Permission to acces Media Library denied");
-      return;
-    }
-    const pickerResult = await ImagePicker.launchImageLibraryAsync();
-    if (pickerResult.cancelled === true) {
-      return;
-    }
-    setSelectedImage({ localUri: pickerResult.uri });
-  };
+const Stack = createNativeStackNavigator();
 
-  return (
-    <View style={styles.container}>
-      <Text style={styles.title}>Hello World!</Text>
-      <Image
-        source={{
-          uri:
-            selectedImage !== null
-              ? selectedImage.localUri
-              : "./assets/duck.png",
-        }}
-        style={styles.image}
-      />
-      <TouchableOpacity onPress={openImagePickerAsync} style={styles.button}>
-        <Text style={styles.buttonText}>Press Me</Text>
-      </TouchableOpacity>
-    </View>
-  );
+const ThemeOne = {
+  ...DefaultTheme,
+  colors: {
+    ...DefaultTheme.colors,
+    primary: "#E6D3A7",
+    background: "#E6D3A7",
+    border: "#3D262A",
+    card: "#3D262A",
+    text: "white",
+  },
 };
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: "center",
-    alignItems: "center",
-    backgroundColor: "#292929",
-  },
-  title: { fontSize: 30, color: "white" },
-  image: { height: 200, width: 200 },
-  button: {
-    backgroundColor: "gold",
-    padding: 7,
-    marginTop: 10,
-  },
-  buttonText: {
-    color: "black",
-    fontSize: 20,
-  },
-});
+function App() {
+  return (
+    <NavigationContainer theme={ThemeOne}>
+      <Stack.Navigator initialRouteName="Welcome">
+        <Stack.Screen name="Welcome" component={WelcomeScreen} />
+        <Stack.Screen name="Log In" component={LogInScreen} />
+        <Stack.Screen name="Register" component={RegisterScreen} />
+        <Stack.Screen name="Home" component={HomeScreen} />
+      </Stack.Navigator>
+    </NavigationContainer>
+  );
+}
 
 export default App;
