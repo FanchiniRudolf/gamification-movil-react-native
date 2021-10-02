@@ -11,19 +11,19 @@ export default [
     cta: 'View article'
   },
   {
-    title: 'Coffee is more than just a drink: It’s …',
-    image: 'https://images.unsplash.com/photo-1500522144261-ea64433bbe27?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2102&q=80',
-    cta: 'View article' 
+    title: 'Fundamentos de Ingeniería de Software',
+    image: 'https://www.computerhope.com/jargon/s/software-engineering.jpg',
+    cta: 'Ir' 
   },
   {
-    title: 'Fashion is a popular style, especially in …',
-    image: 'https://images.unsplash.com/photo-1487222477894-8943e31ef7b2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1326&q=80',
-    cta: 'View article' 
+    title: 'Desarrollo de Aplicaciones Móviles',
+    image: 'https://titan-dev.net/wp-content/uploads/2020/12/mobile-app-development-guide-scaled.jpg',
+    cta: 'Ir' 
   },
   {
-    title: 'Argon is a great free UI packag …',
-    image: 'https://images.unsplash.com/photo-1482686115713-0fbcaced6e28?fit=crop&w=1947&q=80',
-    cta: 'View article', 
+    title: 'Fundamentos de Programación',
+    image: 'https://images.unsplash.com/photo-1542831371-29b0f74f9713?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80',
+    cta: 'Ir', 
     horizontal: true
   },
 ];

@@ -70,7 +70,7 @@ function ArticlesStack(props) {
         component={Articles}
         options={{
           header: ({ navigation, scene }) => (
-            <Header title="Articles" navigation={navigation} scene={scene} />
+            <Header title="Cursos" navigation={navigation} scene={scene} />
           ),
           cardStyle: { backgroundColor: "#F8F9FE" }
         }}

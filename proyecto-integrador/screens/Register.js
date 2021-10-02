@@ -26,10 +26,10 @@ class Register extends React.Component {
             <Block style={styles.registerContainer}>
               <Block flex={0.25} middle style={styles.socialConnect}>
                 <Text color="#8898AA" size={12}>
-                  Sign up with
+                  Registro con
                 </Text>
                 <Block row style={{ marginTop: theme.SIZES.BASE }}>
-                  <Button style={{ ...styles.socialButtons, marginRight: 30 }}>
+                  {/* <Button style={{ ...styles.socialButtons, marginRight: 30 }}>
                     <Block row>
                       <Icon
                         name="logo-github"
@@ -40,7 +40,7 @@ class Register extends React.Component {
                       />
                       <Text style={styles.socialTextButtons}>GITHUB</Text>
                     </Block>
-                  </Button>
+                  </Button> */}
                   <Button style={styles.socialButtons}>
                     <Block row>
                       <Icon
@@ -50,7 +50,7 @@ class Register extends React.Component {
                         color={"black"}
                         style={{ marginTop: 2, marginRight: 5 }}
                       />
-                      <Text style={styles.socialTextButtons}>GOOGLE</Text>
+                      <Text style={styles.socialTextButtons}>Google</Text>
                     </Block>
                   </Button>
                 </Block>
@@ -58,7 +58,7 @@ class Register extends React.Component {
               <Block flex>
                 <Block flex={0.17} middle>
                   <Text color="#8898AA" size={12}>
-                    Or sign up the classic way
+                    Inicio de Sesión Clásico
                   </Text>
                 </Block>
                 <Block flex center>
@@ -70,7 +70,7 @@ class Register extends React.Component {
                     <Block width={width * 0.8} style={{ marginBottom: 15 }}>
                       <Input
                         borderless
-                        placeholder="Name"
+                        placeholder="Nombre"
                         iconContent={
                           <Icon
                             size={16}
@@ -101,7 +101,7 @@ class Register extends React.Component {
                       <Input
                         password
                         borderless
-                        placeholder="Password"
+                        placeholder="Contraseña"
                         iconContent={
                           <Icon
                             size={16}
@@ -123,14 +123,14 @@ class Register extends React.Component {
                       </Block>
                     </Block>
                     <Block row width={width * 0.75}>
-                      <Checkbox
+                      {/* <Checkbox
                         checkboxStyle={{
                           borderWidth: 3
                         }}
                         color={argonTheme.COLORS.PRIMARY}
                         label="I agree with the"
-                      />
-                      <Button
+                      /> */}
+                      {/* <Button
                         style={{ width: 100 }}
                         color="transparent"
                         textStyle={{
@@ -139,12 +139,12 @@ class Register extends React.Component {
                         }}
                       >
                         Privacy Policy
-                      </Button>
+                      </Button> */}
                     </Block>
                     <Block middle>
                       <Button color="primary" style={styles.createButton}>
                         <Text bold size={14} color={argonTheme.COLORS.WHITE}>
-                          CREATE ACCOUNT
+                          Crear Cuenta
                         </Text>
                       </Button>
                     </Block>
