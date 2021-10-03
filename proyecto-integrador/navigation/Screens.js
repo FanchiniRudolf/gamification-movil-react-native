@@ -15,7 +15,7 @@ import Profile from "../screens/Profile";
 import Register from "../screens/Register";
 import Elements from "../screens/Elements";
 import Courses from "../screens/Courses";
-import Leaderboard from "../screens/Leaderboard";
+import GroupLeaderboard from "../screens/GroupLeaderboard";
 // drawer
 import CustomDrawerContent from "./Menu";
 
@@ -154,7 +154,7 @@ function HomeStack(props) {
               navigation={navigation}
               scene={scene}
               optionLeft="Missions"
-              optionRight="GroupLeaderboard"
+              optionRight="Leaderboard"
             />
           ),
           cardStyle: { backgroundColor: "#F8F9FE" },

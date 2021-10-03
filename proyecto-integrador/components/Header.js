@@ -227,7 +227,7 @@ class Header extends React.Component {
         <Button
           shadowless
           style={styles.tab}
-          onPress={() => navigation.navigate("Pro")}
+          onPress={() => navigation.navigate("GroupLeaderboard")}
         >
           <Block row middle>
             <Icon
