@@ -151,6 +151,7 @@ function HomeStack(props) {
               title="Home"
               search
               options
+              bgColor="#FE4A49"
               navigation={navigation}
               scene={scene}
               optionLeft="Missions"
@@ -166,15 +167,16 @@ function HomeStack(props) {
         options={{
           header: ({ navigation, scene }) => (
             <Header
-              title=""
+              title="Missions"
               back
-              white
-              transparent
               navigation={navigation}
               scene={scene}
+              bgColor="#FE4A49"
+              titleColor="white"
+              iconColor="white"
             />
           ),
-          headerTransparent: true,
+          headerTransparent: false,
         }}
       />
       <Stack.Screen
@@ -183,15 +185,13 @@ function HomeStack(props) {
         options={{
           header: ({ navigation, scene }) => (
             <Header
-              title=""
+              title="Leaderboard"
               back
-              white
-              transparent
               navigation={navigation}
               scene={scene}
             />
           ),
-          headerTransparent: true,
+          headerTransparent: false,
         }}
       />
     </Stack.Navigator>

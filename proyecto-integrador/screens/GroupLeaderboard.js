@@ -1,13 +1,32 @@
 import React from "react";
 import { TouchableWithoutFeedback } from "react-native-gesture-handler";
 import { StyleSheet, View, Text } from "react-native";
-import Player from "../components/Player";
+import GestureFlipView from "react-native-gesture-flip-card";
+
+const renderFront = () => {
+  return (
+    <View>
+      <Text style={{ fontSize: 25, color: "#fff" }}>{"Front"}</Text>
+    </View>
+  );
+};
+
+const renderBack = () => {
+  return (
+    <View style={{ backgroundColor: "black" }}>
+      <Text style={{ fontSize: 25, color: "#fff" }}>{"Back"}</Text>
+    </View>
+  );
+};
 
 class GroupLeaderboard extends React.Component {
   render() {
     return (
-      <View style={styles.leaderboard}>
-        <Text>Hola Mundo</Text>
+      <View>
+        <GestureFlipView width={300} height={500}>
+          {renderBack()}
+          {renderFront()}
+        </GestureFlipView>
       </View>
     );
   }

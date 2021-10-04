@@ -291,10 +291,7 @@ class Header extends React.Component {
       "Pro",
       "Profile",
     ].includes(title);
-    const headerStyles = [
-      !noShadow ? styles.shadow : null,
-      transparent ? { backgroundColor: "rgba(0,0,0,0)" } : null,
-    ];
+    const headerStyles = [{ backgroundColor: bgColor }];
 
     const navbarStyles = [
       styles.navbar,
@@ -371,7 +368,7 @@ const styles = StyleSheet.create({
     right: 12,
   },
   header: {
-    backgroundColor: theme.COLORS.WHITE,
+    backgroundColor: "black",
   },
   divider: {
     borderRightWidth: 0.3,
