@@ -41,7 +41,7 @@ const BasketButton = ({ isWhite, style, navigation }) => (
     <Icon
       family="ArgonExtra"
       size={16}
-      name="basket"
+      name="menu-8"
       color={argonTheme.COLORS[isWhite ? "WHITE" : "ICON"]}
     />
   </TouchableOpacity>
@@ -214,7 +214,7 @@ class Header extends React.Component {
         >
           <Block row middle>
             <Icon
-              name="diamond"
+              name="menu-8"
               family="ArgonExtra"
               style={{ paddingRight: 8 }}
               color={argonTheme.COLORS.ICON}
@@ -232,7 +232,7 @@ class Header extends React.Component {
           <Block row middle>
             <Icon
               size={16}
-              name="bag-17"
+              name="menu-8"
               family="ArgonExtra"
               style={{ paddingRight: 8 }}
               color={argonTheme.COLORS.ICON}

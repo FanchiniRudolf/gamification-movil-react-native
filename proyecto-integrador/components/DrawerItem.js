@@ -13,7 +13,7 @@ class DrawerItem extends React.Component {
       case "Home":
         return (
           <Icon
-            name="shop"
+            name="nav-right"
             family="ArgonExtra"
             size={14}
             color={focused ? "white" : argonTheme.COLORS.PRIMARY}
@@ -22,8 +22,8 @@ class DrawerItem extends React.Component {
       case "Elements":
         return (
           <Icon
-            name="map-big"
-            family="ArgonExtra"
+          name="nav-right"
+          family="ArgonExtra"
             size={14}
             color={focused ? "white" : argonTheme.COLORS.ERROR}
           />
@@ -37,24 +37,34 @@ class DrawerItem extends React.Component {
             color={focused ? "white" : argonTheme.COLORS.PRIMARY}
           />
         );
-      case "Profile":
+      case "Course":
         return (
           <Icon
-            name="chart-pie-35"
-            family="ArgonExtra"
+          name="nav-right"
+          family="ArgonExtra"
             size={14}
             color={focused ? "white" : argonTheme.COLORS.WARNING}
           />
         );
-      case "Account":
+      case "Register":
         return (
           <Icon
-            name="calendar-date"
-            family="ArgonExtra"
+          name="nav-right"
+          family="ArgonExtra"
             size={14}
             color={focused ? "white" : argonTheme.COLORS.INFO}
           />
         );
+      case "Login":
+        return (
+          <Icon
+          name="nav-right"
+          family="ArgonExtra"
+          size={14}
+          color={focused ? "white" : argonTheme.COLORS.INFO}
+          />
+          );
+        
       case "Getting Started":
         return (<Icon
           name="spaceship"

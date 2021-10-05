@@ -12,17 +12,17 @@ import { DrawerItem as DrawerCustomItem } from '../components';
 function CustomDrawerContent({ drawerPosition, navigation, profile, focused, state, ...rest }) {
   const screens = [
     "Home", 
-    "Profile",
-    "Account",
+    "Course",
+    "Register",
+    "Login",
     "Elements",
-    "Articles",
   ];
   return (
     <Block
       style={styles.container}
       forceInset={{ top: 'always', horizontal: 'never' }}
     >
-      <Block flex={0.06} style={styles.header}>
+      <Block  style={styles.header}>
         <Image styles={styles.logo} source={Images.Logo} />
       </Block>
       <Block flex style={{ paddingLeft: 8, paddingRight: 14 }}>
@@ -57,8 +57,9 @@ const styles = StyleSheet.create({
     paddingHorizontal: 28,
     paddingBottom: theme.SIZES.BASE,
     paddingTop: theme.SIZES.BASE * 3,
-    justifyContent: 'center'
-  }
+    justifyContent: 'center',
+  },
+  
 });
 
 export default CustomDrawerContent;

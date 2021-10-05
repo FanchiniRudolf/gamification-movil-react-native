@@ -23,8 +23,8 @@ export default {
     PRICE_COLOR: '#EAD5FB',
     BORDER_COLOR: '#E7E7E7',
     BLOCK: '#E7E7E7',
-    ICON: '#172B4D',
-    HEADER: '#525F7F',
+    ICON: '#EADEB8',
+    HEADER: '#EADEB8',
     BORDER: '#CAD1D7',
     WHITE: '#FFFFFF',
     BLACK: '#000000'
