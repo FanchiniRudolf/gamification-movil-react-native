@@ -13,7 +13,7 @@ import Onboarding from "../screens/Onboarding";
 import Pro from "../screens/Pro";
 import Profile from "../screens/Profile";
 import Register from "../screens/Register";
-import Login from "../screens/Login"
+import Login from "../screens/Login";
 import Elements from "../screens/Elements";
 import Courses from "../screens/Courses";
 import GroupLeaderboard from "../screens/GroupLeaderboard";
@@ -247,8 +247,8 @@ function AppStack(props) {
     >
       <Drawer.Screen name="Home" component={HomeStack} />
       <Drawer.Screen name="Profile" component={ProfileStack} />
-      <Drawer.Screen name="Account" component={Register} />
-      <Drawer.Screen name="Login" component={Login}/>
+      <Drawer.Screen name="Register" component={Register} />
+      <Drawer.Screen name="Login" component={Login} />
       <Drawer.Screen name="Elements" component={ElementsStack} />
       <Drawer.Screen name="Courses" component={CoursesStack} />
     </Drawer.Navigator>
