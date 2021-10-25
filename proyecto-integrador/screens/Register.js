@@ -12,9 +12,38 @@ import { Block, Checkbox, Text, theme } from "galio-framework";
 import { Button, Icon, Input } from "../components";
 import { Images, argonTheme } from "../constants";
 
-const { width, height } = Dimensions.get("screen");
+let apiURI = "http://ec2-52-3-171-226.compute-1.amazonaws.com:3000/api";
+
 
 class Register extends React.Component {
+
+  constructor(props) {
+    super(props);
+    this.state = {
+      isLoading: true,
+      data: [],
+    };
+  }
+  componentDidMount() {
+    this.postLogin();
+  }
+  async postLogin() {
+    try {
+      const resp = await fetch(apiURI + '/register', {
+        method: "POST",
+        headers:{
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(data)
+      });
+      console.log(resp.json);
+    } catch (error) {
+      console.error(error);
+    } finally {
+      this.setState({ isLoading: false });
+    }
+  }
+
   render() {
     return (
       <Block flex middle>

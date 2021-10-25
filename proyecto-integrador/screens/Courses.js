@@ -18,7 +18,35 @@ const { width } = Dimensions.get("screen");
 const thumbMeasure = (width - 48 - 32) / 3;
 const cardWidth = width - theme.SIZES.BASE * 2;
 
+let apiURI = "http://ec2-52-3-171-226.compute-1.amazonaws.com:3000/api";
+
 class Courses extends React.Component {
+
+  constructor(props) {
+    super(props);
+    this.state = {
+      isLoading: true,
+      data: [],
+    };
+  }
+  componentDidMount() {
+    this.getCourses();
+  }
+  async getCourses() {
+    try {
+      const resp = await fetch(apiURI + '/courses', {
+        method: "GET",
+      });
+      let respJson = await resp.json();
+      this.setState({data:respJson})
+      console.log(respJson);
+    } catch (error) {
+      console.error(error);
+    } finally {
+      this.setState({ isLoading: false });
+    }
+  }
+
   renderProduct = (item, index) => {
     const { navigation } = this.props;
 

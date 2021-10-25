@@ -44,7 +44,7 @@ function ElementsStack(props) {
           cardStyle: { backgroundColor: "#F8F9FE" },
         }}
       />
-      <Stack.Screen
+      {/* <Stack.Screen
         name="Pro"
         component={Pro}
         options={{
@@ -60,7 +60,7 @@ function ElementsStack(props) {
           ),
           headerTransparent: true,
         }}
-      />
+      /> */}
     </Stack.Navigator>
   );
 }
@@ -78,7 +78,7 @@ function CoursesStack(props) {
           cardStyle: { backgroundColor: "#F8F9FE" },
         }}
       />
-      <Stack.Screen
+      {/* <Stack.Screen
         name="Pro"
         component={Pro}
         options={{
@@ -94,7 +94,7 @@ function CoursesStack(props) {
           ),
           headerTransparent: true,
         }}
-      />
+      /> */}
     </Stack.Navigator>
   );
 }
@@ -119,7 +119,7 @@ function ProfileStack(props) {
           headerTransparent: true,
         }}
       />
-      <Stack.Screen
+      {/* <Stack.Screen
         name="Pro"
         component={Pro}
         options={{
@@ -135,7 +135,7 @@ function ProfileStack(props) {
           ),
           headerTransparent: true,
         }}
-      />
+      /> */}
     </Stack.Navigator>
   );
 }
@@ -250,7 +250,7 @@ function AppStack(props) {
       <Drawer.Screen name="Register" component={Register} />
       <Drawer.Screen name="Login" component={Login} />
       <Drawer.Screen name="Elements" component={ElementsStack} />
-      <Drawer.Screen name="Courses" component={CoursesStack} />
+      <Drawer.Screen name="Course" component={CoursesStack} />
     </Drawer.Navigator>
   );
 }
