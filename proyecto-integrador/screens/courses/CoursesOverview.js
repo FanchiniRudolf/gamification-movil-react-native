@@ -1,9 +1,5 @@
 import React from "react";
 import { FlatList, Text } from "react-native";
-import {
-  TouchableHighlight,
-  TouchableOpacity,
-} from "react-native-gesture-handler";
 import { useSelector } from "react-redux";
 import CourseItem from "../../components/CourseItem";
 
@@ -25,6 +21,7 @@ const CoursesOverviewScreen = (props) => {
             props.navigation.navigate("CourseDetail", {
               courseId: itemData.item.courseId,
               courseName: itemData.item.name,
+              courseImage: itemData.item.imageUrl,
             });
           }}
         />

@@ -4,12 +4,18 @@ import { Platform } from "react-native";
 
 import CourseOverviewScreen from "../screens/courses/CoursesOverview";
 import CourseDetailScreen from "../screens/courseDetail/CourseDetail";
+import CourseMissionsScreen from "../screens/courseDetail/CourseMissions";
+import CourseProfileScreen from "../screens/courseDetail/CourseProfile";
+import CourseLeaderboardScreen from "../screens/courseDetail/CourseLeaderboard";
 import Colors from "../constants/Colors";
 
 const CoursesNavigator = createStackNavigator(
   {
     CoursesOverview: CourseOverviewScreen,
     CourseDetail: CourseDetailScreen,
+    CourseMissions: CourseMissionsScreen,
+    CourseProfile: CourseProfileScreen,
+    CourseLeaderboard: CourseLeaderboardScreen,
   },
   {
     defaultNavigationOptions: {
